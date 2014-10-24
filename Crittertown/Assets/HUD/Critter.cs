@@ -2,13 +2,22 @@
 using System.Collections;
 
 public class Critter {
+
+	public enum Signs {
+		Iba,
+		Onu,
+		Arah,
+		Zebble
+	}
+
 	public readonly string Name = "Horsel";
 	private int FitnessPoints = 0;
 	private int IntelligencePoints = 0;
 	private int CharmPoints = 0;
 	private int LoyaltyPoints = 0;
 
-	public readonly Color color = Color.cyan;
+	public Color color = Color.cyan;
+	public Signs Sign = Signs.Zebble;
 
 	public int Fitness {
 		get {
@@ -34,6 +43,34 @@ public class Critter {
 	public int Loyalty {
 		get {
 			return LoyaltyPoints/100;
+		}
+		private set {}
+	}
+
+	public float FitnessProgress {
+		get {
+			return (FitnessPoints % 100) / 100f;
+		}
+		private set {}
+	}
+
+	public float CharmProgress {
+		get {
+			return (CharmPoints % 100) / 100f;
+		}
+		private set {}
+	}
+
+	public float IntelligenceProgress {
+		get {
+			return (IntelligencePoints % 100) / 100f;
+		}
+		private set {}
+	}
+
+	public float LoyaltyProgress {
+		get {
+			return (LoyaltyPoints % 100) / 100f;
 		}
 		private set {}
 	}
@@ -68,6 +105,10 @@ public class Critter {
 		if (cachedLoyaltyLevel < Loyalty) {
 			UI.ToastDebug("Loyalty LEVEL UP! NOW IT AT LEVEL " + Loyalty);
 		}
+	}
+
+	public Critter(string name) {
+		Name = name;
 	}
 
 	public static void LoadByName(string name) {

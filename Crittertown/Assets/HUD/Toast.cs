@@ -34,7 +34,7 @@ public class Toast {
 	private float bounce;
 
 	public Toast(string message) {
-		this.message = message.ToUpper();
+		this.message = message;
 	}
 
 	public void Draw(GUIStyle style) {

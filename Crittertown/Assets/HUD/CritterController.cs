@@ -13,28 +13,22 @@ public class CritterController : SVBLM.Core.FSM  {
 	}
 
 	public void WanderToTarget(Vector3 target) {
-		wanderProgress = 0f;
-		wanderStart = transform.position;
 		wanderTarget = target;
 		currentState = States.WANDER;
 	}
 
-	public Critter critter = new Critter ();
+	public Critter critter = new Critter ("Horsel");
 	#endregion
 
 
 	#region Implementation
 	NavMeshAgent agent;
-
-
 	Vector3 wanderTarget =  Vector3.zero;
-	Vector3 wanderStart = Vector3.zero;
-	float wanderProgress = 0.0f;
-
 
 	void Start() {
 		agent = GetComponent<NavMeshAgent> ();
 		currentState = States.IDLE;
+		renderer.material.color = critter.color;
 	}
 
 	IEnumerator WANDER_EnterState() {
@@ -56,7 +50,7 @@ public class CritterController : SVBLM.Core.FSM  {
 	#endregion
 
 	#region Debug
-	void Always_AfterUpdate() {
+	override protected void Always_AfterUpdate() {
 		if(Input.GetKeyDown(KeyCode.Alpha1)) {
 			critter.AddCharmPoints(10);
 			UI.ToastDebug("Added 10 Charm!");

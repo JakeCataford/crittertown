@@ -7,6 +7,7 @@ public class UI : SVBLM.Core.Singleton<UI> {
 	public List<Toast> displayed = new List<Toast>();
 	public Queue<Toast> queue = new Queue<Toast>();
 	public Queue<Toast> postHumousQueue = new Queue<Toast>();
+	public Menu activeMenu;
 
 	public Dictionary<GameObject, Color> highlightedObjects = new Dictionary<GameObject, Color>();
 
@@ -120,6 +121,17 @@ public class UI : SVBLM.Core.Singleton<UI> {
 		}
 
 
+	}
+
+	public static T ShowMenu<T>() where T : Menu {
+		if (ActiveMenu != null)	ActiveMenu.Hide ();
+		ActiveMenu = (Menu) Instance.gameObject.AddComponent<T>();
+		return (T) ActiveMenu;
+	}
+
+	public static Menu ActiveMenu {
+		get { return Instance.activeMenu; }
+		set { Instance.activeMenu = value; }
 	}
 
 }
