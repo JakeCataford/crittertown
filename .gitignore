@@ -1,0 +1,27 @@
+Crittertown/[Ll]ibrary/
+Crittertown/[Tt]emp/
+Crittertown/[Oo]bj/
+Crittertown/Assets/Whiteboard/
+Crittertown/*.svd
+Crittertown/*.suo
+Crittertown/*.pdb
+Crittertown/Crittertown_Data/**
+Crittertown/*.swp
+Crittertown/*.exe
+Crittertown/*.app
+Crittertown/*.csproj
+Crittertown/*.pidb
+Crittertown/*.sln
+Crittertown/*.unityproj
+Crittertown/*.userprefs
+
+Crittertown/![Ll]ibrary/*.asset
+Crittertown/![Ll]ibrary/AssetImportState
+Crittertown/![Ll]ibrary/AssetVersioning.db
+Crittertown/![Ll]ibrary/BuildPlayer.prefs
+Crittertown/![Ll]ibrary/ScriptMapper
+Crittertown/![Ll]ibrary/assetservercachev3
+Crittertown/![Ll]ibrary/expandedItems
+Crittertown/![Ll]ibrary/guidmapper
+Crittertown/![Ll]ibrary/unity default resources
+Crittertown/![Ll]ibrary/unity editor resources
