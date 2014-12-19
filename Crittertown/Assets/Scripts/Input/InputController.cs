@@ -30,14 +30,5 @@ public class InputController : MonoBehaviour {
 			UI.ToastDebug("New Critter Created!");
 			CritterFactory.SpawnNewCritter();
 		}
-
-		if (Input.GetKeyDown (KeyCode.Escape)) {
-			Menu.Show<PauseMenu>(false);
-		}
-
-		if(Input.GetKeyDown(KeyCode.B)) {
-			Placeable p = Placeable.Create("TestBall", Random.insideUnitSphere + Vector3.up * 5f, Quaternion.identity);
-			p.Spawn();
-		}
 	}
 }

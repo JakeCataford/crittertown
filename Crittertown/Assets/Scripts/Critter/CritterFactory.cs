@@ -23,8 +23,11 @@ public class CritterFactory : MonoBehaviour {
 		System.Array signs = System.Enum.GetValues (typeof(Critter.Signs));
 		critter.Sign = (Critter.Signs) signs.GetValue (Mathf.FloorToInt (Random.value * signs.Length));
 
-		CritterController c = ((GameObject) Instantiate (Resources.Load<GameObject> ("Critter"))).GetComponent<CritterController>();
-		c.critter = critter;
+		critter.Hunger = 1f;
+		critter.Fatigue = 1f;
+		critter.Fun = 1f;
+
+		critter.Spawn ();
 	}
 
 	public static string GetRandomName() {

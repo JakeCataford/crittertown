@@ -5,9 +5,7 @@ using SQLite4Unity3d;
 namespace ORM {
 	public class Item : Model<Item> {
 		public string Prefab { get; set; }
-		[Unique]
 		public string Preview { get; set; }
-		[Unique]
 		public string Title { get; set; }
 		public string Description { get; set; }
 		public int Price { get; set; }

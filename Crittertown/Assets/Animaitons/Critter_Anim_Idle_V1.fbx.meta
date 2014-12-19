@@ -1,0 +1,259 @@
+fileFormatVersion: 2
+guid: ae8e5471b27db4774889a2226c9576c1
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: clusterAbs
+    100002: clusterChest
+    100004: clusterHips
+    100006: clusterNeckBase
+    100008: control_Hips
+    100010: //RootNode
+    100012: curve1
+    100014: group_ControlCurves
+    100016: group_Root
+    100018: jnt_Head
+    100020: jnt_HeadTop
+    100022: jnt_Hip
+    100024: jnt_L_Ankle
+    100026: jnt_L_Ear1
+    100028: jnt_L_Ear2
+    100030: jnt_L_Elbow
+    100032: jnt_L_Eye
+    100034: jnt_L_Forearm
+    100036: jnt_L_Hip
+    100038: jnt_L_Knee
+    100040: jnt_L_Shoulder
+    100042: jnt_L_Wrist
+    100044: jnt_Neck
+    100046: jnt_Neckbase
+    100048: jnt_Nose1
+    100050: jnt_Nose2
+    100052: jnt_R_Ankle
+    100054: jnt_R_Ear1
+    100056: jnt_R_Ear2
+    100058: jnt_R_Elbow
+    100060: jnt_R_Eye
+    100062: jnt_R_Forearm
+    100064: jnt_R_Hip
+    100066: jnt_R_Knee
+    100068: jnt_R_Shoulder
+    100070: jnt_R_Wrist
+    100072: jnt_Root
+    100074: jnt_Spine1
+    100076: jnt_Spine2
+    100078: jnt_Spine3
+    100080: jnt_Tail1
+    100082: jnt_Tail2
+    100084: spineClusterGroup
+    400000: clusterAbs
+    400002: clusterChest
+    400004: clusterHips
+    400006: clusterNeckBase
+    400008: control_Hips
+    400010: //RootNode
+    400012: curve1
+    400014: group_ControlCurves
+    400016: group_Root
+    400018: jnt_Head
+    400020: jnt_HeadTop
+    400022: jnt_Hip
+    400024: jnt_L_Ankle
+    400026: jnt_L_Ear1
+    400028: jnt_L_Ear2
+    400030: jnt_L_Elbow
+    400032: jnt_L_Eye
+    400034: jnt_L_Forearm
+    400036: jnt_L_Hip
+    400038: jnt_L_Knee
+    400040: jnt_L_Shoulder
+    400042: jnt_L_Wrist
+    400044: jnt_Neck
+    400046: jnt_Neckbase
+    400048: jnt_Nose1
+    400050: jnt_Nose2
+    400052: jnt_R_Ankle
+    400054: jnt_R_Ear1
+    400056: jnt_R_Ear2
+    400058: jnt_R_Elbow
+    400060: jnt_R_Eye
+    400062: jnt_R_Forearm
+    400064: jnt_R_Hip
+    400066: jnt_R_Knee
+    400068: jnt_R_Shoulder
+    400070: jnt_R_Wrist
+    400072: jnt_Root
+    400074: jnt_Spine1
+    400076: jnt_Spine2
+    400078: jnt_Spine3
+    400080: jnt_Tail1
+    400082: jnt_Tail2
+    400084: spineClusterGroup
+    7400000: Idle
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 64
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: group_ControlCurves
+        weight: 1
+      - path: group_ControlCurves/control_Hips
+        weight: 1
+      - path: group_Root
+        weight: 1
+      - path: group_Root/jnt_Root
+        weight: 1
+      - path: group_Root/jnt_Root/curve1
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_L_Hip
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_L_Hip/jnt_L_Knee
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_L_Hip/jnt_L_Knee/jnt_L_Ankle
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_R_Hip
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_R_Hip/jnt_R_Knee
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_R_Hip/jnt_R_Knee/jnt_R_Ankle
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1/jnt_Spine2
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1/jnt_Spine2/jnt_Spine3
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1/jnt_Spine2/jnt_Spine3/jnt_L_Shoulder
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1/jnt_Spine2/jnt_Spine3/jnt_L_Shoulder/jnt_L_Elbow
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1/jnt_Spine2/jnt_Spine3/jnt_L_Shoulder/jnt_L_Elbow/jnt_L_Forearm
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1/jnt_Spine2/jnt_Spine3/jnt_L_Shoulder/jnt_L_Elbow/jnt_L_Forearm/jnt_L_Wrist
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1/jnt_Spine2/jnt_Spine3/jnt_Neckbase
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1/jnt_Spine2/jnt_Spine3/jnt_Neckbase/jnt_Neck
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1/jnt_Spine2/jnt_Spine3/jnt_Neckbase/jnt_Neck/jnt_Head
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1/jnt_Spine2/jnt_Spine3/jnt_Neckbase/jnt_Neck/jnt_Head/jnt_HeadTop
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1/jnt_Spine2/jnt_Spine3/jnt_Neckbase/jnt_Neck/jnt_Head/jnt_L_Ear1
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1/jnt_Spine2/jnt_Spine3/jnt_Neckbase/jnt_Neck/jnt_Head/jnt_L_Ear1/jnt_L_Ear2
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1/jnt_Spine2/jnt_Spine3/jnt_Neckbase/jnt_Neck/jnt_Head/jnt_L_Eye
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1/jnt_Spine2/jnt_Spine3/jnt_Neckbase/jnt_Neck/jnt_Head/jnt_Nose1
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1/jnt_Spine2/jnt_Spine3/jnt_Neckbase/jnt_Neck/jnt_Head/jnt_Nose1/jnt_Nose2
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1/jnt_Spine2/jnt_Spine3/jnt_Neckbase/jnt_Neck/jnt_Head/jnt_R_Ear1
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1/jnt_Spine2/jnt_Spine3/jnt_Neckbase/jnt_Neck/jnt_Head/jnt_R_Ear1/jnt_R_Ear2
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1/jnt_Spine2/jnt_Spine3/jnt_Neckbase/jnt_Neck/jnt_Head/jnt_R_Eye
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1/jnt_Spine2/jnt_Spine3/jnt_R_Shoulder
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1/jnt_Spine2/jnt_Spine3/jnt_R_Shoulder/jnt_R_Elbow
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1/jnt_Spine2/jnt_Spine3/jnt_R_Shoulder/jnt_R_Elbow/jnt_R_Forearm
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Spine1/jnt_Spine2/jnt_Spine3/jnt_R_Shoulder/jnt_R_Elbow/jnt_R_Forearm/jnt_R_Wrist
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Tail1
+        weight: 1
+      - path: group_Root/jnt_Root/jnt_Hip/jnt_Tail1/jnt_Tail2
+        weight: 1
+      - path: group_Root/jnt_Root/spineClusterGroup
+        weight: 1
+      - path: group_Root/jnt_Root/spineClusterGroup/clusterAbs
+        weight: 1
+      - path: group_Root/jnt_Root/spineClusterGroup/clusterChest
+        weight: 1
+      - path: group_Root/jnt_Root/spineClusterGroup/clusterHips
+        weight: 1
+      - path: group_Root/jnt_Root/spineClusterGroup/clusterNeckBase
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .100000001
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

@@ -7,6 +7,8 @@ public class InventoryMenuItem : MonoBehaviour {
 	public InventoryMenu Host;
 	public ORM.Item item;
 	public EventTrigger eventTrigger;
+	public Text quantity;
+	public Image preview;
 	public bool isSpawning = false;
 
 	public void Start() {
@@ -29,6 +31,7 @@ public class InventoryMenuItem : MonoBehaviour {
 			isSpawning = true;
 			GameObject go = item.SpawnInWorld ();
 			Draggable d = go.GetComponent<Draggable> ();
+			Inventory.Spend(item);
 			d.ForceDragStart ();
 			Host.Hide ();
 		}

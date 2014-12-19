@@ -11,8 +11,12 @@ public class CritterController : SVBLM.Core.FSM  {
 		WANDER,
 		SEEK_CONSUMABLE,
 		CONSUMING,
-		EVENT
+		EVENT,
+		TALKING,
+		GARDENING
 	}
+
+	public ConversationAlert activeConversationAlert;
 
 	public void WanderToTarget(Vector3 target) {
 		wanderTarget = target;
@@ -20,11 +24,14 @@ public class CritterController : SVBLM.Core.FSM  {
 	}
 
 	public Critter critter = new Critter ("Horsel");
+
+	public GameObject critterMesh;
+	public Animator animator;
 	#endregion
 
 
 	#region Implementation
-	NavMeshAgent agent;
+	public NavMeshAgent agent;
 	Vector3 wanderTarget =  Vector3.zero;
 
 	Alert lowFunAlert;
@@ -33,12 +40,25 @@ public class CritterController : SVBLM.Core.FSM  {
 	
 	Consumable consumableTarget;
 
+	Cactus myCactus;
+
 	void Start() {
+		critter.Save ();
 		agent = GetComponent<NavMeshAgent> ();
 		currentState = States.IDLE;
-		renderer.material.color = critter.color;
+		critterMesh.renderer.material.color = critter.color;
 		StartCoroutine (NeedsDecayLoop ());
 		TargetNewConsumable (Game.GetClosestFood (transform.position));
+	}
+
+	public void OnApplicationQuit() {
+		Save ();
+	}
+	
+	public void OnApplicationPause(bool paused) {
+		if (paused) {
+			Save ();
+		}
 	}
 
 	IEnumerator WANDER_EnterState() {
@@ -49,6 +69,25 @@ public class CritterController : SVBLM.Core.FSM  {
 	void WANDER_Update() {
 		if (agent.remainingDistance < 0.01f) {
 			currentState = States.IDLE;
+		}
+	}
+
+	IEnumerator GARDENING_EnterState() {
+		myCactus = CactusGarden.GetMyCactus (critter.Id);
+		if(myCactus == null) currentState = States.IDLE;
+		agent.SetDestination (myCactus.transform.position);
+		while (Vector3.Distance(transform.position, myCactus.transform.position) > 2.0f) {
+			yield return null;
+		}
+
+		while (true) {
+			yield return new WaitForSeconds(Random.Range(0.8f, 1.0f));
+			//TODO: play gardening anim
+			myCactus.spot.CactusQuality += 0.1f;
+			if(Random.value < 0.1f) {
+				currentState = States.IDLE;
+				break;
+			}
 		}
 	}
 
@@ -72,17 +111,30 @@ public class CritterController : SVBLM.Core.FSM  {
 
 	void IDLE_Update() {
 		if (Random.value < 0.005f) {
-			WanderToTarget(new Vector3(Random.Range (-10,10), 0, Random.Range(-10,10)));
+			if(Random.value < 0.2f) {
+				if(ConversationManager.FindSomeoneToTalkTo(critter)) {
+					currentState = States.TALKING;
+				}
+			} else {
+				WanderToTarget(new Vector3(Random.Range (-10,10), 0, Random.Range(-10,10)));
+			}
 		}
 
 		if (Random.value < 0.01f) {
 			AttemptToFulfillNeed();
 		}
+
+		if (Random.value < 0.001f) {
+			currentState = States.GARDENING;
+		}
+
 	}
 	#endregion
 
 	#region Debug
 	override protected void Always_AfterUpdate() {
+		animator.SetFloat ("Speed", agent.velocity.magnitude);
+
 		if(Input.GetKeyDown(KeyCode.Alpha1)) {
 			critter.AddCharmPoints(10);
 			UI.ToastDebug("Added 10 Charm!");
@@ -170,5 +222,10 @@ public class CritterController : SVBLM.Core.FSM  {
 
 	private void OnFinishedConsuming() {
 		currentState = States.IDLE;
+	}
+
+
+	void Save() {
+		critter.Save ();
 	}
 }

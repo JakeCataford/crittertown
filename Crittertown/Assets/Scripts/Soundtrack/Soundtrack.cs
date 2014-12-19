@@ -39,6 +39,15 @@ public class Soundtrack : Softleton<Soundtrack> {
 		soundtrackSource.loop = true;
 		soundtrackSource.clip = Songs[_currentTrack];
 		soundtrackSource.Play();
+
+		StartCoroutine (TrackCycle ());
+	}
+
+	IEnumerator TrackCycle() {
+		while (true) {
+			yield return new WaitForSeconds(60.0f);
+			Next();
+		}
 	}
 
 	void Update() {

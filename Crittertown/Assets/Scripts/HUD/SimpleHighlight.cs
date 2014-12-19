@@ -5,7 +5,7 @@ public class SimpleHighlight : MonoBehaviour {
 
 	private Shader[] cachedShaders;
 	public Color color;
-
+	/*
 	void Start () {
 		color.a = 0.8f;
 		cachedShaders = new Shader[renderer.materials.Length];
@@ -24,4 +24,5 @@ public class SimpleHighlight : MonoBehaviour {
 			renderer.materials[i].shader = cachedShaders[i];
 		}
 	}
+	*/
 }

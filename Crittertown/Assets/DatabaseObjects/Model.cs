@@ -20,6 +20,10 @@ namespace ORM {
 			}
 		}
 
+		public static void EnsureCreated<M>() {
+			GetDatabaseConnection().CreateTable<M> ();
+		}
+
 		public static void Reset() {
 			GetDatabaseConnection().DropTable<T> ();
 			GetDatabaseConnection().CreateTable<T> ();
@@ -37,7 +41,7 @@ namespace ORM {
 			return GetDatabaseConnection ().Delete<T> (this.Id);
 		}
 
-		public T FindById(int id) {
+		public static T FindById(int id) {
 			return GetDatabaseConnection().Find<T>(id);
 		}
 

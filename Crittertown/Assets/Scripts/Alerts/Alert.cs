@@ -13,12 +13,12 @@ public abstract class Alert : Menu {
 
 	public static Dictionary<Transform, List<Alert>> activeAlerts = new Dictionary<Transform, List<Alert>> ();
 
-	public static Alert Attach<T>(Transform target) where T : Alert {
+	public static T Attach<T>(Transform target) where T : Alert {
 		UI.CreateEventSystem ();
 		GameObject alert = (GameObject) Instantiate(Resources.Load<GameObject> (typeof(T).FullName));
 		alert.name = typeof(T).FullName;
 		alert.transform.position = target.position + Vector3.up * 1.6f;
-		alert.transform.parent = target;
+		alert.transform.SetParent (target, true);
 
 		Alert alertComponent = alert.GetComponent<Alert> ();
 		if (alertComponent == null) {

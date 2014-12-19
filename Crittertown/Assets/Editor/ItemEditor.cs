@@ -22,6 +22,7 @@ public class ItemEditor : EditorWindow {
 	}
 
 	void OnGUI () {
+		if (selectedItem >= items.Count) selectedItem = 0;
 		EditorGUILayout.BeginHorizontal(GUILayout.Width(position.width), GUILayout.Height(position.height));
 		//SIDEBAR
 		EditorGUILayout.BeginVertical (GUILayout.Width (position.width / 4f), GUILayout.Height (position.height));
