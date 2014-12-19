@@ -32,6 +32,8 @@ public class CactusGarden : SVBLM.Core.Singleton<CactusGarden> {
 		}
 
 		Cactus cactus = NextAvailableSpot ();
+
+		if (cactus == null) return null;
 		cactus.spot.Owner = critterId;
 		cactus.spot.Save ();
 		return cactus;

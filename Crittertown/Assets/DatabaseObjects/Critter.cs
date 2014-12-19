@@ -155,25 +155,26 @@ public class Critter : ORM.Model<Critter> {
 		Name = name;
 	}
 
-	public void Spawn() {
+	public CritterController Spawn(Vector3 spawn) {
 		CritterController controller = ((GameObject) GameObject.Instantiate (Resources.Load<GameObject> ("Critter"))).GetComponent<CritterController>();
 
 		Vector3 random = Random.insideUnitSphere * 30f;
 		NavMeshHit hit;
-		NavMesh.SamplePosition (random, out hit, 300f, 1);
+		NavMesh.SamplePosition (spawn, out hit, 300f, 1);
 		controller.transform.position = hit.position;
 		controller.critter = this;
+		return controller;
 	}
 
 	public void DecreaseHunger() {
-		Hunger -= (0.1f * (1 + (Fitness * 0.1f)));
+		Hunger -= (0.02f * (1 + (Fitness * 0.1f)));
 	}
 	
 	public void DecreaseFatigue() {
-		Fatigue -= (0.1f * (1f / (Fitness + 1 * 0.5f)));
+		Fatigue -= (0.02f * (1f / (Fitness + 1 * 0.5f)));
 	}
 	
 	public void DecreaseFun() {
-		Fun -= (0.1f * (1f / (Loyalty + 1 * 0.5f)));
+		Fun -= (0.02f * (1f / (Loyalty + 1 * 0.5f)));
 	}
 }

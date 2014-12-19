@@ -28,7 +28,7 @@ public class InputController : MonoBehaviour {
 
 		if (Input.GetKeyDown (KeyCode.P)) {
 			UI.ToastDebug("New Critter Created!");
-			CritterFactory.SpawnNewCritter();
+			CritterFactory.SpawnNewCritter(Vector3.zero);
 		}
 	}
 }

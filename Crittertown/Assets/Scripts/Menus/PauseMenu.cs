@@ -57,7 +57,7 @@ public class PauseMenu : Menu{
 
 	public void SpawnACritter() {
 		UI.ToastDebug("New Critter Created!");
-		CritterFactory.SpawnNewCritter();
+		CritterFactory.SpawnNewCritter(Vector3.zero);
 	}
 
 	public void IncreaseStats() {

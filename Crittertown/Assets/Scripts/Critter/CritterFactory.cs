@@ -15,7 +15,7 @@ public class CritterFactory : MonoBehaviour {
 	};
 
 
-	public static void SpawnNewCritter() {
+	public static CritterController SpawnNewCritter(Vector3 spawnLocation) {
 		Critter critter = new Critter (GetRandomName());
 
 		critter.color = new HSBColor (Random.value, 0.5f, 0.8f).ToColor();
@@ -27,7 +27,7 @@ public class CritterFactory : MonoBehaviour {
 		critter.Fatigue = 1f;
 		critter.Fun = 1f;
 
-		critter.Spawn ();
+		return critter.Spawn (spawnLocation);
 	}
 
 	public static string GetRandomName() {

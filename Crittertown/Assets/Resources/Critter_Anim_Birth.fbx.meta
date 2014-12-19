@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: bdc9527e008974c409a08cf240c3e93e
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: clusterAbs
+    100002: clusterChest
+    100004: clusterHips
+    100006: clusterNeckBase
+    100008: control_Hips
+    100010: //RootNode
+    100012: curve1
+    100014: group_ControlCurves
+    100016: group_Root
+    100018: jnt_Head
+    100020: jnt_HeadTop
+    100022: jnt_Hip
+    100024: jnt_L_Ankle
+    100026: jnt_L_Ear1
+    100028: jnt_L_Ear2
+    100030: jnt_L_Elbow
+    100032: jnt_L_Eye
+    100034: jnt_L_Forearm
+    100036: jnt_L_Hip
+    100038: jnt_L_Knee
+    100040: jnt_L_Shoulder
+    100042: jnt_L_Wrist
+    100044: jnt_Neck
+    100046: jnt_Neckbase
+    100048: jnt_Nose1
+    100050: jnt_Nose2
+    100052: jnt_R_Ankle
+    100054: jnt_R_Ear1
+    100056: jnt_R_Ear2
+    100058: jnt_R_Elbow
+    100060: jnt_R_Eye
+    100062: jnt_R_Forearm
+    100064: jnt_R_Hip
+    100066: jnt_R_Knee
+    100068: jnt_R_Shoulder
+    100070: jnt_R_Wrist
+    100072: jnt_Root
+    100074: jnt_Spine1
+    100076: jnt_Spine2
+    100078: jnt_Spine3
+    100080: jnt_Tail1
+    100082: jnt_Tail2
+    100084: spineClusterGroup
+    400000: clusterAbs
+    400002: clusterChest
+    400004: clusterHips
+    400006: clusterNeckBase
+    400008: control_Hips
+    400010: //RootNode
+    400012: curve1
+    400014: group_ControlCurves
+    400016: group_Root
+    400018: jnt_Head
+    400020: jnt_HeadTop
+    400022: jnt_Hip
+    400024: jnt_L_Ankle
+    400026: jnt_L_Ear1
+    400028: jnt_L_Ear2
+    400030: jnt_L_Elbow
+    400032: jnt_L_Eye
+    400034: jnt_L_Forearm
+    400036: jnt_L_Hip
+    400038: jnt_L_Knee
+    400040: jnt_L_Shoulder
+    400042: jnt_L_Wrist
+    400044: jnt_Neck
+    400046: jnt_Neckbase
+    400048: jnt_Nose1
+    400050: jnt_Nose2
+    400052: jnt_R_Ankle
+    400054: jnt_R_Ear1
+    400056: jnt_R_Ear2
+    400058: jnt_R_Elbow
+    400060: jnt_R_Eye
+    400062: jnt_R_Forearm
+    400064: jnt_R_Hip
+    400066: jnt_R_Knee
+    400068: jnt_R_Shoulder
+    400070: jnt_R_Wrist
+    400072: jnt_Root
+    400074: jnt_Spine1
+    400076: jnt_Spine2
+    400078: jnt_Spine3
+    400080: jnt_Tail1
+    400082: jnt_Tail2
+    400084: spineClusterGroup
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

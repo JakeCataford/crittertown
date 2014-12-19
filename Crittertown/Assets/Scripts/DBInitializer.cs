@@ -31,7 +31,7 @@ public class DBInitializer : MonoBehaviour {
 
 		IEnumerable<Critter> critters = Critter.All ();
 		foreach (Critter critter in critters) {
-			critter.Spawn();
+			critter.Spawn(new Vector3(Random.Range(-10f,10f), 0, Random.Range (-10f,10f)));
 		}
 
 		Finish ();
